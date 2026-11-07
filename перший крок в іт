@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRSTSTEP — Твій старт в IT</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#f4f4f2',
+                            card: '#ffffff',
+                            dark: '#171717',
+                            gray: '#777777',
+                            lightGray: '#e9e9e7',
+                            border: '#e5e5e5',
+                            accent: '#2563eb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: #f4f4f2;
+            color: #171717;
+        }
+        .text-huge {
+            font-size: clamp(44px, 7.5vw, 96px);
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-black selection:text-white">
+
+    <!-- Header Section -->
+    <header class="w-full flex justify-between items-center py-6 px-[5%] sm:px-[8%] border-b border-gray-300 bg-[#f4f4f2]/90 backdrop-blur-md sticky top-0 z-40">
+        <a href="#" class="text-2xl font-black tracking-tighter text-brand-dark hover:opacity-80 transition-opacity">
+            FIRST<span class="text-gray-400">STEP.</span>
+        </a>
+        <nav class="flex space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold tracking-wide">
+            <a href="#" class="hover:text-gray-500 transition-colors">Головна</a>
+            <a href="#jobs" class="hover:text-gray-500 transition-colors">Вакансії</a>
+            <a href="#about" class="hover:text-gray-500 transition-colors">Про нас</a>
+        </nav>
+    </header>
+
+    <main class="grow">
+        <!-- Hero Section -->
+        <section class="pt-16 pb-20 px-[5%] sm:px-[8%] lg:pt-28 lg:pb-24 max-w-7xl mx-auto">
+            <div class="text-xs tracking-[0.25em] text-gray-500 font-bold uppercase mb-6 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+                YOUR CAREER STARTS HERE / 2026
+            </div>
+
+            <h1 class="text-huge font-black text-brand-dark mb-8 uppercase">
+                ТВОЯ<br>
+                ПЕРША<br>
+                РОБОТА <span class="text-gray-400">В IT.</span>
+            </h1>
+
+            <p class="max-w-md text-base sm:text-lg leading-relaxed text-gray-600 mb-10 font-normal">
+                Не маєш досвіду? Це не проблема. Знайди першу можливість, покажи свої навички та зроби крок до кар'єри в технологіях.
+            </p>
+
+            <a href="#jobs" class="inline-flex items-center gap-2 bg-brand-dark text-white px-8 py-4 rounded font-bold text-sm tracking-wider uppercase hover:bg-neutral-800 transition-all transform hover:-translate-y-1 shadow-md">
+                ПЕРЕГЛЯНУТИ ВАКАНСІЇ 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-brand-lightGray py-10 px-[5%] sm:px-[8%] border-y border-gray-300">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
+                <div class="border-l-2 border-brand-dark pl-4">
+                    <strong class="block text-3xl sm:text-4xl font-black">01</strong>
+                    <p class="text-gray-600 text-xs sm:text-sm font-medium mt-1">Перший реальний досвід</p>
+                </div>
+                <div class="border-l-2 border-brand-dark pl-4">
+                    <strong class="block text-3xl sm:text-4xl font-black">02</strong>
+                    <p class="text-gray-600 text-xs sm:text-sm font-medium mt-1">Junior та Intern вакансії</p>
+                </div>
+                <div class="border-l-2 border-brand-dark pl-4">
+                    <strong class="block text-3xl sm:text-4xl font-black">03</strong>
+                    <p class="text-gray-600 text-xs sm:text-sm font-medium mt-1">Швидкий розвиток навичок</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section class="py-20 px-[5%] sm:px-[8%] max-w-7xl mx-auto" id="jobs">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="text-3xl sm:text-5xl font-black tracking-tight uppercase">ПОЧНИ ЗАРАЗ.</h2>
+                    <p class="text-gray-500 text-sm mt-2">Актуальні можливості для початківців</p>
+                </div>
+                <!-- Filter buttons -->
+                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                    <button onclick="filterJobs('all')" class="job-filter active bg-brand-dark text-white px-4 py-2 rounded-full transition-colors" data-filter="all">Всі</button>
+                    <button onclick="filterJobs('JUNIOR')" class="job-filter bg-white border border-gray-300 text-brand-dark hover:bg-gray-100 px-4 py-2 rounded-full transition-colors" data-filter="JUNIOR">Junior</button>
+                    <button onclick="filterJobs('INTERN')" class="job-filter bg-white border border-gray-300 text-brand-dark hover:bg-gray-100 px-4 py-2 rounded-full transition-colors" data-filter="INTERN">Intern</button>
+                </div>
+            </div>
+
+            <!-- Job Cards Container -->
+            <div class="space-y-4" id="job-cards-container">
+                <!-- Job Card 1 -->
+                <div class="job-item group bg-white p-6 sm:p-8 border border-gray-200 rounded-lg flex justify-between items-center hover:border-gray-900 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" 
+                     data-level="JUNIOR" 
+                     onclick="openJobModal('Python Developer', 'Junior', 'Python · Git · SQL · REST API', 'Шукаємо замотивованого Junior Python розробника для підтримки та розвитку бекенд сервісів. Базові знання SQL та алгоритмів обовʼязкові.')">
+                    <div>
+                        <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-gray-100 px-3 py-1 rounded-full text-brand-dark mb-3">JUNIOR</span>
+                        <h3 class="text-lg sm:text-2xl font-extrabold group-hover:text-blue-600 transition-colors">Python Developer</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm mt-1 font-medium">Python · Git · SQL · Віддалено</p>
+                    </div>
+                    <span class="text-2xl sm:text-3xl text-gray-400 group-hover:text-brand-dark group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">↗</span>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-item group bg-white p-6 sm:p-8 border border-gray-200 rounded-lg flex justify-between items-center hover:border-gray-900 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" 
+                     data-level="INTERN" 
+                     onclick="openJobModal('Python Internship', 'Intern', 'Python · Основи програмування · OOP', 'Чудова стажувальна програма на 3 місяці з менторською підтримкою. Навчимо будувати реальні проєкти з нуля.')">
+                    <div>
+                        <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full mb-3">INTERN</span>
+                        <h3 class="text-lg sm:text-2xl font-extrabold group-hover:text-blue-600 transition-colors">Python Internship</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm mt-1 font-medium">Python · Основи програмування · Офіс / Гібрид</p>
+                    </div>
+                    <span class="text-2xl sm:text-3xl text-gray-400 group-hover:text-brand-dark group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">↗</span>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-item group bg-white p-6 sm:p-8 border border-gray-200 rounded-lg flex justify-between items-center hover:border-gray-900 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" 
+                     data-level="JUNIOR" 
+                     onclick="openJobModal('Frontend Developer', 'Junior', 'HTML5 · CSS3 · JavaScript · React basics', 'Запрошуємо Junior Frontend розробника створювати сучасні та адаптивні веб-інтерфейси. Потрібні впевнені знання JS та HTML/CSS.')">
+                    <div>
+                        <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-gray-100 px-3 py-1 rounded-full text-brand-dark mb-3">JUNIOR</span>
+                        <h3 class="text-lg sm:text-2xl font-extrabold group-hover:text-blue-600 transition-colors">Frontend Developer</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm mt-1 font-medium">HTML · CSS · JavaScript · React</p>
+                    </div>
+                    <span class="text-2xl sm:text-3xl text-gray-400 group-hover:text-brand-dark group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">↗</span>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-item group bg-white p-6 sm:p-8 border border-gray-200 rounded-lg flex justify-between items-center hover:border-gray-900 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" 
+                     data-level="INTERN" 
+                     onclick="openJobModal('QA Manual Intern', 'Intern', 'Testing Basics · Bug Tracking · Web fundamentals', 'Шукаємо уважного до деталей стажера для ручного тестування веб-додатків. Досвід не потрібен, лише аналітичне мислення.')">
+                    <div>
+                        <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full mb-3">INTERN</span>
+                        <h3 class="text-lg sm:text-2xl font-extrabold group-hover:text-blue-600 transition-colors">QA Manual Intern</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm mt-1 font-medium">Тестування · Баг-трекінг · Віддалено</p>
+                    </div>
+                    <span class="text-2xl sm:text-3xl text-gray-400 group-hover:text-brand-dark group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">↗</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="bg-brand-dark text-white py-20 px-[5%] sm:px-[8%]" id="about">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-xs tracking-[0.25em] text-gray-400 font-bold uppercase mb-6">ABOUT FIRSTSTEP</div>
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight max-w-4xl uppercase">
+                    КОЖЕН ПРОФЕСІОНАЛ КОЛИСЬ БУВ ПОЧАТКІВЦЕМ.
+                </h2>
+                <p class="max-w-2xl text-gray-400 text-base sm:text-lg leading-relaxed mt-8 font-normal">
+                    FIRSTSTEP — платформа для тих, хто тільки починає свій шлях в IT. Тут можна ознайомитися з вимогами до вакансій, побачити приклади проєктів, пройти стажування та зробити свій перший впевнений крок у сферу технологій.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-[5%] sm:px-[8%] border-t border-gray-300 bg-[#f4f4f2]">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-gray-500">
+            <div class="font-black text-lg text-brand-dark">FIRST<span class="text-gray-400">STEP.</span></div>
+            <p>Твій перший крок у світ IT. © 2026</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Applying to Job -->
+    <div id="jobModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl animate-fade-in">
+            <button onclick="closeJobModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black text-2xl font-bold">&times;</button>
+            <span id="modalLevel" class="inline-block text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-3 py-1 rounded-full text-brand-dark mb-2">JUNIOR</span>
+            <h3 id="modalTitle" class="text-2xl font-black text-brand-dark mb-1">Python Developer</h3>
+            <p id="modalTech" class="text-xs font-semibold text-gray-500 mb-4"></p>
+            <p id="modalDesc" class="text-sm text-gray-600 mb-6 leading-relaxed"></p>
+            
+            <form onsubmit="handleApply(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Ваше ім'я</label>
+                    <input type="text" required placeholder="Олександр" class="w-full px-4 py-2.5 rounded border border-gray-300 text-sm focus:outline-none focus:border-black">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Email / Telegram</label>
+                    <input type="text" required placeholder="@username або email@example.com" class="w-full px-4 py-2.5 rounded border border-gray-300 text-sm focus:outline-none focus:border-black">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Посилання на резюме або GitHub</label>
+                    <input type="url" required placeholder="https://github.com/yourprofile" class="w-full px-4 py-2.5 rounded border border-gray-300 text-sm focus:outline-none focus:border-black">
+                </div>
+                <button type="submit" class="w-full bg-brand-dark text-white font-bold text-sm py-3 rounded hover:bg-neutral-800 transition-colors uppercase">
+                    Надіслати відгук
+                </button>
+            </form>
+            <div id="modalSuccess" class="hidden mt-4 text-center p-4 bg-emerald-50 text-emerald-800 text-sm rounded font-medium">
+                Дякуємо! Ваша заявка успішно надіслана.
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Interactive Filter for Job Cards
+        function filterJobs(level) {
+            const buttons = document.querySelectorAll('.job-filter');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === level) {
+                    btn.classList.add('bg-brand-dark', 'text-white');
+                    btn.classList.remove('bg-white', 'text-brand-dark', 'hover:bg-gray-100');
+                } else {
+                    btn.classList.remove('bg-brand-dark', 'text-white');
+                    btn.classList.add('bg-white', 'text-brand-dark', 'hover:bg-gray-100');
+                }
+            });
+
+            const cards = document.querySelectorAll('.job-item');
+            cards.forEach(card => {
+                if (level === 'all' || card.getAttribute('data-level') === level) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Job Modal Logic
+        function openJobModal(title, level, tech, desc) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalLevel').innerText = level;
+            document.getElementById('modalTech').innerText = tech;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalSuccess').classList.add('hidden');
+            document.getElementById('jobModal').classList.remove('hidden');
+        }
+
+        function closeJobModal() {
+            document.getElementById('jobModal').classList.add('hidden');
+        }
+
+        function handleApply(e) {
+            e.preventDefault();
+            const successBox = document.getElementById('modalSuccess');
+            successBox.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                closeJobModal();
+            }, 2500);
+        }
+
+        // Close Modal when clicking background
+        window.onclick = function(event) {
+            const modal = document.getElementById('jobModal');
+            if (event.target === modal) {
+                closeJobModal();
+            }
+        }
+    </script>
+</body>
+</html>
